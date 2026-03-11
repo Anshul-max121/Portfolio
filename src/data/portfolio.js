@@ -13,7 +13,7 @@ export const personal = {
   location:  'Bhilwara, Rajasthan, India',
   email:     'khatikanshul8@gmail.com',
   phone:     '+91 7976921685',
-  linkedin:  'https://linkedin.com/in/anshul-khichi',
+  linkedin:  'https://www.linkedin.com/in/anshul-khichi-1b9b7027a/',
   github:    'https://github.com/AnshulKhichi11',
   resume:    '/AnshulKhichi_Resume.pdf',
   available: true,
