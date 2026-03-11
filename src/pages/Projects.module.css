@@ -1,0 +1,236 @@
+/* ══════════════════════════════════════════════
+   PROJECTS PAGE — Module Styles
+══════════════════════════════════════════════ */
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.038em;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+/* ══ Filter tabs ══ */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filterBtn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 480;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: color 0.14s, background 0.14s, border-color 0.14s;
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+.filterBtn:hover {
+  color: var(--text);
+  background: var(--bg2);
+  border-color: var(--border);
+}
+.filterActive {
+  color: var(--text) !important;
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow-sm);
+  font-weight: 540;
+}
+
+/* Count line */
+.count {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted2);
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+/* ══ Grid ══ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ══ Card ══ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  border-color: var(--border2);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 3px top bar */
+.cardBar {
+  height: 3px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Card body */
+.cardBody {
+  padding: 22px 24px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Meta row */
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.metaRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  color: var(--muted2);
+  letter-spacing: 0.02em;
+}
+
+/* Title */
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 640;
+  letter-spacing: -0.026em;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+/* Description */
+.desc {
+  font-size: 0.82rem;
+  line-height: 1.76;
+  color: var(--muted);
+  flex: 1;
+}
+
+/* Highlights */
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 4px;
+}
+
+.hl {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--text2);
+}
+
+.hlDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+  opacity: 0.7;
+  display: block;
+}
+
+/* Card footer */
+.cardFoot {
+  padding: 14px 24px 18px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.linkRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .title {
+    margin-bottom: 24px;
+  }
+  .cardBody {
+    padding: 18px 18px 14px;
+  }
+  .cardFoot {
+    padding: 12px 18px 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .filters {
+    gap: 4px;
+  }
+  .filterBtn {
+    font-size: 0.73rem;
+    padding: 5px 10px;
+  }
+  .linkRow {
+    flex-direction: column;
+  }
+  .linkRow .btn {
+    justify-content: center;
+  }
+}

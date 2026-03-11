@@ -1,0 +1,247 @@
+/* ══════════════════════════════════════════════
+   CONTACT PAGE — Module Styles
+══════════════════════════════════════════════ */
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.038em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 0.93rem;
+  line-height: 1.82;
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+/* Response badge row */
+.responseRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.responseText {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.responseText strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Two-column grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* ── Section ── */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 16px;
+}
+
+/* ── Contact list ── */
+.contactList {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.14s;
+}
+.contactItem:last-child { border-bottom: none; }
+.contactItem:hover { background: var(--bg2); }
+
+.contactMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.contactNote {
+  font-size: 0.7rem;
+  color: var(--muted2);
+}
+
+.contactValue {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  text-align: right;
+  transition: color 0.14s;
+  word-break: break-word;
+}
+a.contactValue:hover { color: var(--accent); }
+
+/* ── Social list ── */
+.socialList {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.14s;
+}
+.socialItem:last-child { border-bottom: none; }
+.socialItem:hover { background: var(--bg2); }
+
+.socialLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.socialLabel {
+  font-size: 0.86rem;
+  font-weight: 560;
+  color: var(--text);
+  letter-spacing: -0.015em;
+}
+
+.socialDesc {
+  font-size: 0.71rem;
+  color: var(--muted2);
+}
+
+.socialRight {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.socialHandle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.socialItem:hover .socialHandle { color: var(--accent); }
+.socialItem:hover svg { color: var(--accent); }
+.socialItem svg { color: var(--muted2); transition: color 0.14s; }
+
+/* ── Availability card ── */
+.availCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.availLeft {
+  flex: 1;
+  min-width: 220px;
+}
+
+.availTitle {
+  font-size: 0.96rem;
+  font-weight: 620;
+  letter-spacing: -0.022em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.availDesc {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 380px;
+}
+
+.availTags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .availCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 20px;
+  }
+  .availCard .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .contactItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .contactValue {
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .responseRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

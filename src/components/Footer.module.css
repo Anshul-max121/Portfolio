@@ -1,0 +1,328 @@
+/* ══════════════════════════════════════════════
+   FOOTER — Editorial · Structured · Premium
+══════════════════════════════════════════════ */
+
+.footer {
+  margin-top: 120px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* ══ Name band ══ */
+.marqueeWrap {
+  padding: 44px 0 0;
+  overflow: hidden;
+}
+
+.nameRule {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nameLarge {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  letter-spacing: -0.03em;
+  color: var(--text);
+  white-space: nowrap;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.nameRule__line {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--border2);
+}
+
+/* ══ Main grid ══ */
+.main {
+  display: grid;
+  grid-template-columns: 1.8fr 0.8fr 0.8fr;
+  gap: 56px;
+  padding-top: 48px;
+  padding-bottom: 52px;
+  align-items: start;
+}
+
+/* ══ Identity ══ */
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  width: 36px;
+  height: 36px;
+  background: var(--text);
+  color: var(--white);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.logoMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.role {
+  font-size: 0.875rem;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.roleAlt {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.bio {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.emailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text2);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: color 0.15s, border-color 0.15s;
+}
+.emailLink:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.emailLink svg {
+  opacity: 0.6;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.emailLink:hover svg {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  color: var(--green);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.availDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  animation: availPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes availPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.45; transform: scale(0.8); }
+}
+
+/* ══ Link columns ══ */
+.col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0;
+}
+
+.colHead {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 16px;
+}
+
+.colLink {
+  display: block;
+  font-size: 0.83rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+  transition: color 0.14s;
+  position: relative;
+}
+.colLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--border2);
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.colLink:hover { color: var(--text); }
+.colLink:hover::after { width: 100%; }
+
+/* ══ Bottom bar ══ */
+.bar {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.barInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.copy {
+  font-size: 0.71rem;
+  color: var(--muted2);
+  letter-spacing: -0.005em;
+  line-height: 1;
+}
+
+.barRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.barChip {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  color: var(--muted2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2px 7px;
+  letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+
+/* Tablet landscape */
+@media (max-width: 960px) {
+  .main {
+    grid-template-columns: 1.4fr 0.9fr 0.9fr;
+    gap: 40px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 760px) {
+  .footer {
+    margin-top: 80px;
+  }
+  .nameLarge {
+    font-size: clamp(2.4rem, 10vw, 3.8rem);
+  }
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 28px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+  /* Identity spans full width on tablet portrait */
+  .identity {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bio {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .emailLink,
+  .availability {
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .marqueeWrap {
+    padding-top: 32px;
+  }
+  .nameRule {
+    padding-bottom: 28px;
+  }
+  .nameLarge {
+    font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+    padding-top: 32px;
+    padding-bottom: 36px;
+  }
+  .identity {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .barInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .identity {
+    grid-column: auto;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+  .nameRule__line {
+    display: none;
+  }
+}

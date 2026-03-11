@@ -1,0 +1,341 @@
+/* ══════════════════════════════════════════════
+   ABOUT PAGE
+══════════════════════════════════════════════ */
+
+.page {
+  padding-top: 64px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.038em;
+  line-height: 1.1;
+  margin-bottom: 52px;
+}
+
+/* ══ Grid ══ */
+.grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ══ Aside ══ */
+.aside {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Photo */
+.photoWrap {
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, #eef2fb 0%, #f4f6fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photoInitials {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 4rem;
+  color: var(--accent);
+  opacity: 0.18;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Info table */
+.infoTable {
+  border-top: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.infoKey {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  flex-shrink: 0;
+}
+
+.infoVal {
+  font-size: 0.79rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Buttons */
+.asideBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ══ Content ══ */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  display: inline-flex;
+  margin-bottom: 22px;
+}
+
+.lead {
+  font-size: 1.02rem;
+  font-weight: 450;
+  line-height: 1.78;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.body {
+  font-size: 0.875rem;
+  line-height: 1.82;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* Skills */
+.skillsBlock {
+  margin-top: 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.skillsLabel {
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 10px;
+}
+
+.skillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ══ Education ══ */
+.eduBlock {
+  border-top: 1px solid var(--border);
+  padding-top: 44px;
+}
+
+.eduEyebrow {
+  margin-bottom: 20px;
+}
+
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eduCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.eduTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.eduLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.eduDegree {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.eduSchool {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.eduUniv {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  color: var(--muted2);
+  letter-spacing: 0.01em;
+}
+
+.eduRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.eduGrade {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* Highlights */
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.hlItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.77rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hlDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 7px;
+  opacity: 0.6;
+  display: block;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+
+/* Tablet — aside becomes horizontal row */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .aside {
+    position: static;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .photoWrap {
+    margin-bottom: 0;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* Mobile — everything single column */
+@media (max-width: 580px) {
+  .page {
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+  .title {
+    margin-bottom: 36px;
+  }
+  .aside {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .photoWrap {
+    aspect-ratio: 4 / 3;
+    max-height: 220px;
+  }
+  .photoInitials {
+    font-size: 3rem;
+  }
+  .infoRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 8px 0;
+  }
+  .infoVal {
+    text-align: left;
+  }
+  .asideBtns {
+    flex-direction: column;
+  }
+  .asideBtns .btn {
+    justify-content: center;
+    width: 100%;
+  }
+  .lead {
+    font-size: 0.95rem;
+  }
+  .eduTop {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .eduRight {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Very small */
+@media (max-width: 360px) {
+  .photoWrap {
+    max-height: 180px;
+  }
+}
