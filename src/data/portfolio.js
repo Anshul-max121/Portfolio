@@ -15,7 +15,7 @@ export const personal = {
   phone:     '+91 7976921685',
   linkedin:  'https://www.linkedin.com/in/anshul-khichi-1b9b7027a/',
   github:    'https://github.com/AnshulKhichi11',
-  resume:    '/AnshulKhichi_Resume.pdf',
+  resume:    '/Resume_Anshul_Khichi.pdf',
   available: true,
   objective:
     'Versatile Full-Stack Developer with expertise in MERN stack, Flutter, and IoT hardware integration. Skilled in building scalable web and mobile applications, real-time monitoring systems, and automation solutions that bridge software and hardware innovation.',
